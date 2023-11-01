@@ -298,7 +298,7 @@ tsdiag(modelfit_AMZN)
 #Lag = 2 box test
 Box.test(modelfit_AMZN$residuals, lag= 2, type="Ljung-Box") #Analyze p value
 Box.test(modelfit_AMZN$residuals, type="Ljung-Box") # run generalized test depending on p value of ^
-price_forecastAMZN <- forecast(modelfit_AMZN,h=30) #30 day forecast for FDX
+price_forecastAMZN <- forecast(modelfit_AMZN,h=30) #30 day forecast for AMZN
 plot(price_forecastAMZN, main = "30 Day AMZN Forecast")
 head(price_forecastAMZN$mean)
 head(price_forecastAMZN$upper) #Upper 80% and 95% conf int
